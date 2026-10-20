@@ -33,6 +33,9 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import myprofile from '../assets/myprofile.png';
 import movetech from '../assets/movetech.jpeg';
+import nextjs from '../assets/Nextj.jpg';
+import csharp from '../assets/C#.png';
+import net from '../assets/net.jpg';
 
 export default {
   email,
@@ -70,4 +73,7 @@ export default {
   spotify,
   myprofile,
   movetech,
+  nextjs,
+  csharp,
+  net,
 };

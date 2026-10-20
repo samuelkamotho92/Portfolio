@@ -1,19 +1,56 @@
 .app {
-  background-color: var(--primary-color);
+  background-color: var(--paper);
   font-family: var(--font-base);
+  color: var(--black-color);
 }
 
 .app__whitebg {
-  background-color: var(--white-color);
+  background:
+    radial-gradient(700px 320px at 0% 0%, rgba(224, 154, 79, 0.16), transparent 55%),
+    var(--paper);
 }
 
 .app__primarybg {
-  background-color: var(--primary-color);
+  background:
+    radial-gradient(820px 380px at 100% 0%, rgba(224, 154, 79, 0.18), transparent 58%),
+    var(--ink);
+  color: var(--cream);
+
+  .head-text {
+    color: var(--cream);
+  }
+
+  .copyright p {
+    color: var(--mist);
+  }
+
+  .app__social div {
+    background: rgba(255, 253, 248, 0.06);
+    border-color: rgba(247, 243, 236, 0.16);
+
+    svg {
+      color: var(--cream);
+    }
+
+    &:hover {
+      background: var(--amber);
+      border-color: var(--amber);
+
+      svg {
+        color: var(--ink);
+      }
+    }
+  }
+
+  .app__navigation-dot {
+    background: rgba(247, 243, 236, 0.28);
+  }
 }
 
 .app__container {
   width: 100%;
   min-height: 100vh;
+  scroll-margin-top: 5.5rem;
 
   display: flex;
   flex-direction: row;
@@ -52,14 +89,18 @@
 }
 
 .head-text {
-  font-size: 2.75rem;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 560;
   text-align: center;
   color: var(--black-color);
-  text-transform: capitalize;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
 
   span {
-    color: var(--secondary-color);
+    color: var(--ember);
+    font-style: italic;
+    font-weight: 560;
   }
 
   @media screen and (min-width: 2000px) {
@@ -108,10 +149,11 @@
   div {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 14px;
     background-color: var(--white-color);
-    margin: 0.25rem 0;
+    margin: 0.35rem 0;
     border: 1px solid var(--lightGray-color);
+    box-shadow: 0 10px 20px rgba(20, 24, 32, 0.06);
 
     display: flex;
     justify-content: center;
@@ -126,11 +168,12 @@
     }
 
     &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
+      background-color: var(--ink);
+      border-color: var(--ink);
+      transform: translateY(-3px);
 
       svg {
-        color: var(--white-color);
+        color: var(--amber);
       }
     }
 
@@ -160,13 +203,15 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: rgba(20, 24, 32, 0.22);
     margin: 0.5rem;
 
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease;
 
-    &:hover {
-      background-color: var(--secondary-color);
+    &:hover,
+    &--active {
+      background-color: var(--amber);
+      transform: scale(1.25);
     }
 
     @media screen and (min-width: 2000px) {

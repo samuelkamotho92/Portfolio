@@ -13,18 +13,35 @@
 }
 
 .app__profile-item {
-  width: 190px;
+  width: 220px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin: 2rem;
+  margin: 1.5rem;
+  padding: 0.85rem 0.85rem 1.2rem;
+  border-radius: 22px;
+  background: var(--white-color);
+  border: 1px solid rgba(20, 24, 32, 0.06);
+  box-shadow: 0 18px 40px rgba(20, 24, 32, 0.08);
+  transform-style: preserve-3d;
 
   img {
     width: 100%;
     height: 170px;
-    border-radius: 15px;
+    border-radius: 16px;
     object-fit: cover;
+    box-shadow: 0 12px 24px rgba(20, 24, 32, 0.12);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 560;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    line-height: 1.55;
   }
 
   @media screen and (min-width: 2000px) {

@@ -11,8 +11,8 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
+    const query = '*[_type == "experiences" && !(_id in path("drafts.**"))] | order(year desc)';
+    const skillsQuery = '*[_type == "skills" && !(_id in path("drafts.**"))]';
 
     client.fetch(query).then((data) => {
       setExperiences(data);
@@ -32,7 +32,9 @@ const Skills = () => {
           {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ y: -10, rotateX: 14, scale: 1.06 }}
+              transition={{ duration: 0.45 }}
+              style={{ transformPerspective: 700 }}
               className="app__skills-item app__flex"
               key={skill.name}
             >
@@ -40,7 +42,11 @@ const Skills = () => {
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+                {skill.icon ? (
+                  <img src={urlFor(skill.icon)} alt={skill.name} />
+                ) : (
+                  <span className="skill-mark">{skill.name.slice(0, 2)}</span>
+                )}
               </div>
               <p className="p-text">{skill.name}</p>
             </motion.div>

@@ -1,0 +1,118 @@
+.app__community {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+.community-kicker {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ember);
+  font-size: 0.78rem;
+  margin-bottom: 0.8rem;
+}
+
+.community-lead {
+  max-width: 46rem;
+  margin: 1.2rem auto 0;
+  text-align: center;
+  color: var(--gray-color);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.community-builds {
+  width: min(980px, 100%);
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.community-build {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: left;
+  background: var(--white-color);
+  border-radius: 20px;
+  border: 1px solid rgba(20, 24, 32, 0.06);
+  box-shadow: 0 16px 32px rgba(20, 24, 32, 0.06);
+
+  img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 560;
+  }
+
+  p {
+    margin-top: 0.4rem;
+    color: var(--gray-color);
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 0.7rem;
+    color: var(--ember);
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.community-circles {
+  width: min(980px, 100%);
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+
+  article {
+    text-align: left;
+    padding: 1.2rem 1.3rem;
+    border-radius: 18px;
+    background: rgba(224, 154, 79, 0.12);
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+  }
+
+  p {
+    margin-top: 0.45rem;
+    color: var(--gray-color);
+    line-height: 1.55;
+  }
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.community-enter {
+  align-self: center;
+  margin-top: 1.8rem;
+  padding: 0.9rem 1.25rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+}

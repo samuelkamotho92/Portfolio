@@ -75,6 +75,7 @@ const Footer = () => {
           </h3>
         </div>
       )}
+      <p className="site-colophon">© 2026 Samuel Kamotho. All rights reserved.</p>
     </>
   );
 };

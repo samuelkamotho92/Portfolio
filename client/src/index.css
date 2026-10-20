@@ -1,15 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,700;1,9..144,560&family=Outfit:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --font-base: "DM Sans", sans-serif;
+  --font-base: "Outfit", sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
 
-  --primary-color: #edf2f8;
-  --secondary-color: #313bac;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --brown-color: #46364a;
-  --white-color: #ffffff;
+  --ink: #10141c;
+  --ink-soft: #1a2130;
+  --paper: #f4efe6;
+  --paper-deep: #e7dfd2;
+  --cream: #f7f3ec;
+  --amber: #e09a4f;
+  --ember: #c4622d;
+  --mist: #9aa3b2;
+  --line: rgba(224, 154, 79, 0.45);
+
+  --primary-color: #f4efe6;
+  --secondary-color: #e09a4f;
+  --black-color: #141820;
+  --lightGray-color: rgba(20, 24, 32, 0.12);
+  --gray-color: #5c6573;
+  --brown-color: #3a2a22;
+  --white-color: #fffdf8;
 }
 
 * {
@@ -17,4 +28,9 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--black-color);
 }

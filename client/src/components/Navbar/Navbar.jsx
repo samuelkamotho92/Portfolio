@@ -2,22 +2,35 @@ import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
-// import { images } from '../../constants';
 import './Navbar.scss';
+
+const links = [
+  { label: 'home', href: '/#home' },
+  { label: 'about', href: '/#about' },
+  { label: 'work', href: '/#work' },
+  { label: 'community', href: '/community' },
+  { label: 'contact', href: '/#contact' },
+];
+
+const onCommunity = window.location.pathname.replace(/\/+$/, '') === '/community';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="app__navbar">
-      <div className="app__navbar-logo">
-        {/* <img src={images.logo} alt="logo" /> */}
-      </div>
+      <a href="/#home" className="app__navbar-logo">
+        <span>SK</span>
+        <em>Samuel Kamotho</em>
+      </a>
       <ul className="app__navbar-links">
-        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
+        {links.map((item) => (
+          <li
+            className={`app__flex p-text${item.label === 'community' && onCommunity ? ' is-current' : ''}`}
+            key={`link-${item.label}`}
+          >
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <a href={item.href}>{item.label}</a>
           </li>
         ))}
       </ul>
@@ -32,10 +45,10 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
+              {links.map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} onClick={() => setToggle(false)}>
+                    {item.label}
                   </a>
                 </li>
               ))}

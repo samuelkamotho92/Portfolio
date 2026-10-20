@@ -9,7 +9,7 @@ const About = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "abouts" && !(_id in path("drafts.**"))]';
 
     client.fetch(query).then((data) => {
       setAbouts(data);
@@ -18,14 +18,15 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">Love to create <span>Optimised</span>,<span>Fast</span>  <br />and  <span>Good Looking</span> Applications</h2>
+      <h2 className="head-text">Systems that <span>keep running</span>, explained clearly</h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
+            whileInView={{ opacity: 1, y: [24, 0] }}
+            whileHover={{ y: -12, rotateX: -8, rotateY: 8, scale: 1.02 }}
+            transition={{ duration: 0.45, type: 'tween' }}
+            style={{ transformPerspective: 900 }}
             className="app__profile-item"
             key={about.title + index}
           >

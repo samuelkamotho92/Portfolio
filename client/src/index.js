@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
+import CommunityPage from './pages/CommunityPage';
 import './index.css';
+
+const path = window.location.pathname.replace(/\/+$/, '') || '/';
+const Page = path === '/community' ? CommunityPage : App;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Page />
   </React.StrictMode>,
   document.getElementById('root'),
 );
