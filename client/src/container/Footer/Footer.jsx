@@ -9,6 +9,7 @@ const Footer = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const { username, email, message } = formData;
 
@@ -27,12 +28,17 @@ const Footer = () => {
       message: formData.message,
     };
 
+    setSubmitError(false);
+
     client.create(contact)
       .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
       })
-      .catch((err) => console.log(err));
+      .catch(() => {
+        setLoading(false);
+        setSubmitError(true);
+      });
   };
 
   return (
@@ -67,6 +73,7 @@ const Footer = () => {
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          {submitError && <p className="p-text">Message could not be sent. Try again in a moment.</p>}
         </div>
       ) : (
         <div>
