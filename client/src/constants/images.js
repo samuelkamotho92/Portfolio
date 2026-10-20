@@ -34,7 +34,7 @@ import spotify from '../assets/spotify.png';
 import myprofile from '../assets/myprofile.png';
 import movetech from '../assets/movetech.jpeg';
 import nextjs from '../assets/Nextj.jpg';
-import csharp from '../assets/C#.png';
+import csharp from '../assets/csharp.png';
 import net from '../assets/net.jpg';
 
 export default {
