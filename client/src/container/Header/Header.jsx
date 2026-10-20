@@ -75,6 +75,7 @@ const Header = () => {
         </ul>
         <div className="header-actions">
           <a className="header-actions__primary" href="#work">See the work</a>
+          <a className="header-actions__quiet" href="/Samuel-Kamotho-CV.pdf" download="Samuel-Kamotho-CV.pdf">Download CV</a>
           <a className="header-actions__quiet" href="#contact">Contact</a>
         </div>
       </motion.div>

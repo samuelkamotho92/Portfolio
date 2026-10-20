@@ -111,6 +111,23 @@
   }
 }
 
+.app__navbar-cv {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background: var(--amber);
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+}
+
 .app__navbar-menu {
   width: 35px;
   height: 35px;
