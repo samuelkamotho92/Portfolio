@@ -25,7 +25,7 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">Selected <span>work</span></h2>
-      <p className="work-intro">Two products in public right now. More will join this row as they are ready.</p>
+      <p className="work-intro">Products in public right now. More will join these listings as they are ready.</p>
 
       <motion.div
         transition={{ duration: 0.5, delayChildren: 0.5 }}
