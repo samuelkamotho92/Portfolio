@@ -8,9 +8,9 @@ import './Work.scss';
 
 const isFeatured = (work) => {
   const title = (work.title || '').toLowerCase().replace(/[^a-z]/g, '');
-  return title.includes('greenkey') || 
-     title.includes('mlima') ||
-     title.includes('Visiolitics');
+  return title.includes('greenkey')
+    || title.includes('mlima')
+    || title.includes('visiolitics');
 };
 
 const Work = () => {
