@@ -35,7 +35,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <a className="app__navbar-cv" href="/Samuel-Kamotho-CV.pdf" download="Samuel-Kamotho-CV.pdf">Download CV</a>
+      <a className="app__navbar-cv" href="/#documents">Documents</a>
 
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -55,8 +55,8 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <a href="/Samuel-Kamotho-CV.pdf" download="Samuel-Kamotho-CV.pdf" onClick={() => setToggle(false)}>
-                  Download CV
+                <a href="/#documents" onClick={() => setToggle(false)}>
+                  Documents
                 </a>
               </li>
             </ul>

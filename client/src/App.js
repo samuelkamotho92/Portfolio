@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import {
-  About, Community, Footer, Header, Skills, Testimonial, Work,
+  About, Community, Documents, Footer, Header, Skills, Testimonial, Work,
 } from './container';
 import { Navbar } from './components';
 import './App.scss';
@@ -25,6 +25,7 @@ const App = () => {
       <Header />
       <About />
       <Work />
+      <Documents />
       <Community />
       <Skills />
       <Testimonial />
