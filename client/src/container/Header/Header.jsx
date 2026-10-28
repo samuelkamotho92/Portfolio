@@ -65,7 +65,7 @@ const Header = () => {
           <em> Kamotho</em>
         </h1>
         <p className="header-pitch">
-          Senior engineer with over 3 years of experience building .NET , Javascript and React
+          Senior engineer with close to 6 years of experience building .NET , Javascript and React
           systems that keep client data moving.
         </p>
         <ul className="header-proof">
